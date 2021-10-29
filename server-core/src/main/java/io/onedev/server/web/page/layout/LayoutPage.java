@@ -297,7 +297,6 @@ public abstract class LayoutPage extends BasePage {
 		
 		Plugin product = AppLoader.getProduct();
 		sidebar.add(new Label("productVersion", "Ver. " + product.getVersion()));
-		sidebar.add(new ExternalLink("docLink", OneDev.getInstance().getDocRoot() + "/"));
 		
 		WebMarkupContainer topbar = new WebMarkupContainer("topbar");
 		add(topbar);

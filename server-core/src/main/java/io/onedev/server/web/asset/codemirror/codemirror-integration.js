@@ -41,7 +41,7 @@ onedev.server.codemirror = {
 			onedev.server.codemirror.setModeByName(cm, "cobol");
 		} else if (fileName.endsWith(".js")) {
 			onedev.server.codemirror.setModeByName(cm, "jsx");
-		} else if (fileName == ".onedev-buildspec") {
+		} else if (fileName == ".buildspec") {
 			onedev.server.codemirror.setModeByName(cm, "xml");
 		} else {
 		    var modeInfo = CodeMirror.findModeByFileName(fileName);

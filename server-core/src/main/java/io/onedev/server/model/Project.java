@@ -820,7 +820,7 @@ public class Project extends AbstractEntity {
 			if (blob != null) {  
 				buildSpec = Optional.fromNullable(BuildSpec.parse(blob.getBytes()));
 			} else { 
-				Blob oldBlob = getBlob(new BlobIdent(commitId.name(), ".onedev-buildspec", FileMode.TYPE_FILE), false);
+				Blob oldBlob = getBlob(new BlobIdent(commitId.name(), ".buildspec", FileMode.TYPE_FILE), false);
 				if (oldBlob != null)
 					buildSpec = Optional.fromNullable(BuildSpec.parse(oldBlob.getBytes()));
 				else

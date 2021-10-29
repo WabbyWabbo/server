@@ -873,7 +873,7 @@ public class ProjectBlobPage extends ProjectPage implements BlobRenderContext,
 			protected void onConfigure() {
 				super.onConfigure();
 				if (resolvedRevision != null && isOnBranch() && state.blobIdent.path == null && state.mode == Mode.VIEW) {
-					BlobIdent oldBlobIdent = new BlobIdent(resolvedRevision.name(), ".onedev-buildspec", FileMode.TYPE_FILE);
+					BlobIdent oldBlobIdent = new BlobIdent(resolvedRevision.name(), ".buildspec", FileMode.TYPE_FILE);
 					BlobIdent blobIdent = new BlobIdent(resolvedRevision.name(), BuildSpec.BLOB_PATH, FileMode.TYPE_FILE);
 					setVisible(getProject().getBlob(blobIdent, false) == null && getProject().getBlob(oldBlobIdent, false) == null);
 				} else {
@@ -1267,7 +1267,7 @@ public class ProjectBlobPage extends ProjectPage implements BlobRenderContext,
 		public Mode mode = Mode.VIEW;
 		
 		/*
-		 * Some blob can be rendered in a way for easier understanding, such as .onedev-buildspec.yml, 
+		 * Some blob can be rendered in a way for easier understanding, such as .buildspec.yml, 
 		 * In these cases, the VIEW_PLAIN mode enables to view plain text of the blob. Applicable
 		 * only when mode is VIEW 
 		 */

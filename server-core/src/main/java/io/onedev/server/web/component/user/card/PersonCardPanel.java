@@ -51,12 +51,12 @@ public class PersonCardPanel extends Panel {
 			if (personIdent.getName().equals(User.SYSTEM_NAME))
 				builder.append("<i>System Account</i>");
 			else
-				builder.append("<i>No OneDev Account</i>");
+				builder.append("<i>No Web Account</i>");
 		} else {
 			if (user != null) 
 				builder.append("<i>@" + HtmlEscape.escapeHtml5(user.getName()) + "</i>"); 
 			else 
-				builder.append("<i>No OneDev Account</i>");
+				builder.append("<i>No Web Account</i>");
 		}
 		container.add(new Label("info", builder.toString()).setEscapeModelStrings(false));
 	}

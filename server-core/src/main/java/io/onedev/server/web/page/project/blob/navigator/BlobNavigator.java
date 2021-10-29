@@ -255,7 +255,7 @@ public class BlobNavigator extends Panel {
 				name = context.getInitialNewPath();
 			else if (file.path.contains("/"))
 				name = StringUtils.substringAfterLast(file.path, "/");
-			else if (file.path.equals(".onedev-buildspec"))
+			else if (file.path.equals(".buildspec"))
 				name = BuildSpec.BLOB_PATH;
 			else
 				name = file.path;
